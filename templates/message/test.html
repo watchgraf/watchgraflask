@@ -296,7 +296,7 @@
 <main class='app'>
   <aside class='c-sidepanel'>
     <div class='c-panels'>
-      <a class='c-panels__logo' style='background-image: url({{get_profile_db(profile_id=session["PROFILE"]["idProfile"]).imageAvatar}}); background-size: cover; background-position: center; background-repeat: no-repeat;' title=''></a>
+      <a class='c-panels__logo' style='background-image: url({{get_logged_profile().imageAvatar}}); background-size: cover; background-position: center; background-repeat: no-repeat;' title=''></a>
       
       <nav class='c-panels__navigation'>
         <ul class='c-panels__ul'>

@@ -117,7 +117,7 @@
                       <!-- section title -->
                       <div class="col-12">
                         <h2 class="section__title">Son İzlenilen Bölümler</h2>
-                        {%if check_profile() and profile_info.idProfile == session['PROFILE']['idProfile']%}
+                        {%if check_profile() and profile_info.idProfile == get_logged_profile().idProfile%}
                         <ul class="card__list" style="margin: 0px; float: right; position: absolute; bottom: 25px; right: 25px;">
                           <a style="cursor: pointer;" class="open-modal">
                             <li onclick="profileproc_tvepisodecontent_clearLatestWatchedEpisodes();"> <!-- BETA -->

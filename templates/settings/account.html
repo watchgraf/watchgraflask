@@ -31,7 +31,7 @@
 									<img src="{{url_for('static', filename='img/logo.png')}}" alt="">
 								</div>
 								<div class="profile__meta">
-									<h3>{{get_account_db(account_id=session['ACCOUNT']['idAccount']).username}}</h3>
+									<h3>{{get_account_db(account_id=get_logged_account().idAccount).username}}</h3>
 								</div>
 							</div>
 
@@ -96,11 +96,11 @@
 									<div class="col-12 col-md-12 col-lg-12 col-xl-12">
 										<div class="profile__group">
 											<label class="profile__label" for=""><b>Hesap ID'si</b> <span style="font-size: 12px;">Değiştirilemez.</span></label>
-                      <input type="text" class="profile__input" value="{{session['ACCOUNT']['idAccount']}}" disabled="">
+                      <input type="text" class="profile__input" value="{{get_logged_account().idAccount}}" disabled="">
 										</div>
 										<div class="profile__group">
 											<label class="profile__label" for=""><b>Kayıt Tarihi</b> <span style="font-size: 12px;">Değiştirilemez.</span></label>
-                      <input type="text" class="profile__input" value="{{format_date(get_account_db(account_id=session['ACCOUNT']['idAccount']).signupDate, 'full', locale='tr')}}" disabled="">
+                      <input type="text" class="profile__input" value="{{format_date(get_account_db(account_id=get_logged_account().idAccount).signupDate, 'full', locale='tr')}}" disabled="">
 										</div>
 									</div>
 								</div>
@@ -126,11 +126,11 @@
 									<div class="col-12 col-md-12 col-lg-12 col-xl-12">
 										<div class="profile__group">
 											<label class="profile__label" for=""><b>Kullanıcı Adı</b></label>
-                      <input type="text" class="profile__input" id="input_new_username" value="{{get_account_db(account_id=session['ACCOUNT']['idAccount']).username}}">
+                      <input type="text" class="profile__input" id="input_new_username" value="{{get_account_db(account_id=get_logged_account().idAccount).username}}">
 										</div>
 										<div class="profile__group">
 											<label class="profile__label" for=""><b>E-Posta Adresi</b></label>
-                      <input type="text" class="profile__input" id="input_new_email_address" value="{{get_account_db(account_id=session['ACCOUNT']['idAccount']).emailAddress}}">
+                      <input type="text" class="profile__input" id="input_new_email_address" value="{{get_account_db(account_id=get_logged_account().idAccount).emailAddress}}">
 										</div>
 									</div>
 

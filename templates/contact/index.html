@@ -89,8 +89,8 @@
 {%block script%}
   {%if check_profile()%}
     <script>
-      $('#name').val(`{{get_profile_db(profile_id=session['PROFILE']['idProfile']).username|safe}}`);
-      $('#email_address').val(`{{get_account_db(account_id=session['ACCOUNT']['idAccount']).emailAddress|safe}}`);
+      $('#name').val(`{{get_logged_profile().username|safe}}`);
+      $('#email_address').val(`{{get_logged_account().emailAddress|safe}}`);
     </script>
   {%endif%}
 {%endblock%}
