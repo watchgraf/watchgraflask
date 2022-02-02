@@ -162,4 +162,5 @@ def utility_processor():
                 get_content_genre=get_content_genre, get_genre_list=get_genre_list, \
                 get_content_language=get_content_language, get_language_list=get_language_list, \
                 get_content_country=get_content_country, get_country_list=get_country_list, \
+                get_logged_account=get_logged_account, get_logged_profile=get_logged_profile, \
                 format_date=format_date, format_datetime=format_datetime, format_time=format_time)

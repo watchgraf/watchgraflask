@@ -25,9 +25,9 @@
 				<div class="col-12">
 					<div class="profile__content">
 						<div class="profile__user">
-              <div style="min-width: 50px; min-height: 50px; background-image: url('{{get_profile_db(profile_id=get_logged_profile().idProfile).imageAvatar}}'); background-size: cover; background-position: center; border-radius: 50%; margin-right: 20px; float: left;"></div>
+              <div style="min-width: 50px; min-height: 50px; background-image: url('{{get_logged_profile().imageAvatar}}'); background-size: cover; background-position: center; border-radius: 50%; margin-right: 20px; float: left;"></div>
 							<div class="profile__meta" style="max-width: 100px;">
-								<h3>{{get_profile_db(profile_id=get_logged_profile().idProfile).username}}</h3>
+								<h3>{{get_logged_profile().username}}</h3>
 							</div>
 						</div>
 
@@ -99,7 +99,7 @@
 									</div>
 									<div class="profile__group">
 										<label class="profile__label" for="username">Yeni Kullanıcı Adı</label>
-                    <input type="text" class="profile__input" id="input_new_username" value="{{get_profile_db(profile_id=get_logged_profile().idProfile).username}}">
+                    <input type="text" class="profile__input" id="input_new_username" value="{{get_logged_profile().username}}">
 									</div>
 								</div>
 
